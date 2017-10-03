@@ -1,4 +1,4 @@
-baseurl = "/"  # End your URL with a `/` trailing slash, e.g. https://app.netlify.com/sites/sethsblog/settings/general.
+baseurl = "/"  # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
 title = "Seth's Blog"
 copyright = "&copy; 2017 Seth Hiegel"
 theme = "hugo-academic"
@@ -21,7 +21,7 @@ defaultContentLanguageInSubdir = false
   organization = "Mercyhurst University"
   organization_url = "http://my.mercyhurst.edu/"
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
-  avatar = "portrait.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
+  avatar = "seth1.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
   email = "shiege76@lakers.mercyhurst.edu"
   
   phone = "814-897-6961"
@@ -117,11 +117,7 @@ defaultContentLanguageInSubdir = false
   #
   #   Full list: https://jpswalsh.github.io/academicons/
 
-  [[params.social]]
-    icon = "envelope"
-    icon_pack = "fa"
-    link = "mailto:test@example.org"
-
+  
   [[params.social]]
     icon = "twitter"
     icon_pack = "fa"
@@ -145,20 +141,14 @@ defaultContentLanguageInSubdir = false
   url = "#about"
   weight = 1
 
-[[menu.main]]
-  name = "Publications"
-  url = "#publications_selected"
-  weight = 2
+
 
 [[menu.main]]
   name = "Posts"
   url = "#posts"
   weight = 3
 
-[[menu.main]]
-  name = "Projects"
-  url = "#projects"
-  weight = 4
+
 
 
 
