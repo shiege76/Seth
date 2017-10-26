@@ -7,14 +7,42 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Seth Hiegel</copyright>
+    <lastBuildDate>Tue, 17 Oct 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/categories/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>R</title>
-      <link>/categories/r/</link>
+      <title>Bar Plots</title>
+      <link>/categories/bar-plots/</link>
       <pubDate>Tue, 17 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/categories/r/</guid>
+      <guid>/categories/bar-plots/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Histograms</title>
+      <link>/categories/histograms/</link>
+      <pubDate>Thu, 26 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/histograms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scatter Plots</title>
+      <link>/categories/scatter-plots/</link>
+      <pubDate>Thu, 26 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/scatter-plots/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Time Series</title>
+      <link>/categories/time-series/</link>
+      <pubDate>Thu, 26 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/time-series/</guid>
       <description></description>
     </item>
     

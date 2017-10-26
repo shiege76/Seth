@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Time Series on Seth&#39;s Blog</title>
+    <link>/categories/time-series/</link>
+    <description>Recent content in Time Series on Seth&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Seth Hiegel</copyright>
+    <lastBuildDate>Thu, 26 Oct 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/categories/time-series/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Time Series</title>
+      <link>/post/time-series/</link>
+      <pubDate>Thu, 26 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/time-series/</guid>
+      <description>&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(Lahman)
+library(sqldf)
+library(ggplot2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Time Series graphs are related to scatter plots but the main difference is that time series shows a change over time or a trend.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Extraction----------------------------
+
+query&amp;lt;-&amp;quot;SELECT yearID,HR
+FROM Batting
+WHERE playerID=&amp;#39;ruthba01&amp;#39;&amp;quot;
+
+result&amp;lt;-sqldf(query)
+
+# Visualization-------------------------
+
+ggplot()+
+  #geom_point(data=result,aes(x=yearID,y=HR))+
+  geom_line(data=result,aes(x=yearID,y=HR))+
+  ggtitle(&amp;quot;Ruth&amp;#39;s Homerun Totals Throughout the Years&amp;quot;)+
+  xlab(&amp;quot;Year&amp;quot;)+
+  ylab(&amp;quot;Homeruns&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2017-10-26-time-series_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The Graph above shows Babe Ruths Homerun total throughout his career.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

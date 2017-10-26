@@ -1,0 +1,35 @@
+---
+title: Time Series
+author: Seth Hiegel
+date: '2017-10-26'
+slug: time-series
+categories:
+  - Time Series
+tags:
+  - Visualization
+---
+
+
+
+<pre class="r"><code>library(Lahman)
+library(sqldf)
+library(ggplot2)</code></pre>
+<p>Time Series graphs are related to scatter plots but the main difference is that time series shows a change over time or a trend.</p>
+<pre class="r"><code># Extraction----------------------------
+
+query&lt;-&quot;SELECT yearID,HR
+FROM Batting
+WHERE playerID=&#39;ruthba01&#39;&quot;
+
+result&lt;-sqldf(query)
+
+# Visualization-------------------------
+
+ggplot()+
+  #geom_point(data=result,aes(x=yearID,y=HR))+
+  geom_line(data=result,aes(x=yearID,y=HR))+
+  ggtitle(&quot;Ruth&#39;s Homerun Totals Throughout the Years&quot;)+
+  xlab(&quot;Year&quot;)+
+  ylab(&quot;Homeruns&quot;)</code></pre>
+<p><img src="/post/2017-10-26-time-series_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>The Graph above shows Babe Ruths Homerun total throughout his career.</p>

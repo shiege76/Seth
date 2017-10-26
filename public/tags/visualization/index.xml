@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Seth&#39;s Blog</title>
-    <link>/post/</link>
-    <description>Recent content in Posts on Seth&#39;s Blog</description>
+    <title>Visualization on Seth&#39;s Blog</title>
+    <link>/tags/visualization/</link>
+    <description>Recent content in Visualization on Seth&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Seth Hiegel</copyright>
     <lastBuildDate>Thu, 26 Oct 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/post/" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/visualization/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Histograms</title>

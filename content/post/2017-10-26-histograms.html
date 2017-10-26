@@ -1,0 +1,28 @@
+---
+title: Histograms
+author: Seth Hiegel
+date: '2017-10-26'
+slug: histograms
+categories:
+  - Histograms
+tags:
+  - Visualization
+---
+
+
+
+<pre class="r"><code>library(Lahman)
+library(sqldf)
+library(ggplot2)</code></pre>
+<p>A histogram is a graphical representation, similar to a bar chart in structure, that organizes a group of data points into user-specified ranges. The histogram condenses a data series into an easily interpreted visual by taking many data points and grouping them into logical ranges or bins.</p>
+<pre class="r"><code>query&lt;-&quot;SELECT weight
+FROM Master&quot;
+
+result&lt;-sqldf(query)
+
+ggplot()+
+  geom_histogram(data=result,aes(x=weight),color=&quot;green&quot;,fill=&quot;white&quot;,bins=50)+
+  ggtitle(&quot;Body Weight Distribution for Baseball Players&quot;)</code></pre>
+<pre><code>## Warning: Removed 854 rows containing non-finite values (stat_bin).</code></pre>
+<p><img src="/post/2017-10-26-histograms_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>Weight distribtution for baseball players</p>

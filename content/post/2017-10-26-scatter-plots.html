@@ -1,0 +1,34 @@
+---
+title: Scatter Plots
+author: Seth Hiegel
+date: '2017-10-26'
+slug: scatter-plots
+categories:
+  - Scatter plots
+tags:
+  - Visualization
+---
+
+
+
+<pre class="r"><code>library(Lahman)
+library(sqldf)
+library(ggplot2)</code></pre>
+<pre class="r"><code>#Extractcing Data----------------------------
+
+query&lt;-&quot;SELECT playerID,sum(HR) AS career_HR ,sum(SO) AS career_SO 
+FROM Batting
+GROUP BY playerID
+HAVING sum(HR)&gt;=400&quot;
+
+result&lt;-sqldf(query)
+
+#Visulaizing Data----------------------------
+
+ggplot()+
+  geom_point(data=result,aes(x=career_SO,y=career_HR), size=3, color=&quot;blue&quot;)+
+  ggtitle(&quot;Career Strikeouts vs. Homeruns for Great Hitters&quot;)+
+  xlab(&quot;Career Strikeouts&quot;)+
+  ylab(&quot;Career Homerunes&quot;)</code></pre>
+<p><img src="/post/2017-10-26-scatter-plots_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>In the above chart, I created a scatter plot using career strikeouts as the x-axis and career homeurns as the y-axis. I changed the color and the size of the dots making them size 3 and color blue.</p>

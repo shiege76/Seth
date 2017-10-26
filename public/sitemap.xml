@@ -5,6 +5,33 @@
     
     <url>
     
+      <loc>/post/histograms/</loc>
+      <lastmod>2017-10-26T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/post/scatter-plots/</loc>
+      <lastmod>2017-10-26T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/post/time-series/</loc>
+      <lastmod>2017-10-26T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/post/r-markdown/</loc>
       <lastmod>2017-10-17T00:00:00+00:00</lastmod>
     </url>
@@ -32,7 +59,8 @@
     
     <url>
     
-      <loc>/categories/</loc>
+      <loc>/categories/bar-plots/</loc>
+      <lastmod>2017-10-17T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -41,8 +69,18 @@
     
     <url>
     
-      <loc>/tags/mathematics/</loc>
+      <loc>/categories/</loc>
       <lastmod>2017-10-17T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/categories/histograms/</loc>
+      <lastmod>2017-10-26T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -52,7 +90,7 @@
     <url>
     
       <loc>/post/</loc>
-      <lastmod>2017-10-17T00:00:00+00:00</lastmod>
+      <lastmod>2017-10-26T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -70,8 +108,8 @@
     
     <url>
     
-      <loc>/categories/r/</loc>
-      <lastmod>2017-10-17T00:00:00+00:00</lastmod>
+      <loc>/categories/scatter-plots/</loc>
+      <lastmod>2017-10-26T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -91,7 +129,26 @@
     <url>
     
       <loc>/tags/</loc>
-      <lastmod>2017-10-17T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/categories/time-series/</loc>
+      <lastmod>2017-10-26T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/tags/visualization/</loc>
+      <lastmod>2017-10-26T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

@@ -1,0 +1,31 @@
+---
+title: Histograms
+author: Seth Hiegel
+date: '2017-10-26'
+slug: histograms
+categories:
+  - Histograms
+tags:
+  - Visualization
+---
+
+```{r message=FALSE,warning=FALSE}
+library(Lahman)
+library(sqldf)
+library(ggplot2)
+```
+A histogram is a graphical representation, similar to a bar chart in structure, that organizes a group of data points into user-specified ranges. The histogram condenses a data series into an easily interpreted visual by taking many data points and grouping them into logical ranges or bins.
+
+
+```{r}
+query<-"SELECT weight
+FROM Master"
+
+result<-sqldf(query)
+
+ggplot()+
+  geom_histogram(data=result,aes(x=weight),color="green",fill="white",bins=50)+
+  ggtitle("Body Weight Distribution for Baseball Players")
+```
+
+Weight distribtution for baseball players

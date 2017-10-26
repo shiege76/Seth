@@ -33,17 +33,17 @@
 
   
 
-  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Seth&#39;s Blog">
-  <link rel="feed" href="/index.xml" type="application/rss+xml" title="Seth&#39;s Blog">
+  <link rel="alternate" href="/categories/histograms/index.xml" type="application/rss+xml" title="Seth&#39;s Blog">
+  <link rel="feed" href="/categories/histograms/index.xml" type="application/rss+xml" title="Seth&#39;s Blog">
 
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
 
-  <link rel="canonical" href="/post/r-markdown/">
+  <link rel="canonical" href="/categories/histograms/">
 
   
 
-  <title>Bar Plot | Seth&#39;s Blog</title>
+  <title>Histograms | Seth&#39;s Blog</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
@@ -114,145 +114,32 @@
 </nav>
 
 
-<article class="article" itemscope itemtype="http://schema.org/Article">
-
-  
 
 
-  <div class="article-container">
-    <h1 itemprop="name">Bar Plot</h1>
-    
 
-<div class="article-metadata">
+<div class="universal-wrapper">
 
-  <span class="article-date">
-    
-    <time datetime="2017-10-17 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-      Oct 17, 2017
-    </time>
-  </span>
+  <h1>Histograms</h1>
 
-  
-  
-  
-  <span class="article-categories">
-    <i class="fa fa-folder"></i>
-    
-    <a href="/categories/bar-plots">Bar Plots</a
-    >
-    
-  </span>
-  
   
 
   
   
-  
-  <span class="article-tags">
-    <i class="fa fa-tags"></i>
-    
-    <a href="/tags/visualization">Visualization</a
-    >
-    
-  </span>
-  
-  
-
-  
-  
-<div class="share-box" aria-hidden="true">
-  <ul class="share">
-    <li>
-      <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=%2fpost%2fr-markdown%2f"
-         target="_blank">
-        <i class="fa fa-facebook"></i>
-      </a>
-    </li>
-    <li>
-      <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Bar%20Plot&amp;url=%2fpost%2fr-markdown%2f"
-         target="_blank">
-        <i class="fa fa-twitter"></i>
-      </a>
-    </li>
-    <li>
-      <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fr-markdown%2f&amp;title=Bar%20Plot"
-         target="_blank">
-        <i class="fa fa-linkedin"></i>
-      </a>
-    </li>
-    <li>
-      <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=%2fpost%2fr-markdown%2f&amp;title=Bar%20Plot"
-         target="_blank">
-        <i class="fa fa-weibo"></i>
-      </a>
-    </li>
-    <li>
-      <a class="email"
-         href="mailto:?subject=Bar%20Plot&amp;body=%2fpost%2fr-markdown%2f">
-        <i class="fa fa-envelope"></i>
-      </a>
-    </li>
-  </ul>
-</div>
-
-
-  
-
-</div>
-
-    <div class="article-style" itemprop="articleBody">
-      <pre class="r"><code>library(Lahman)
-library(sqldf)
-library(ggplot2)</code></pre>
-<pre class="r"><code>query&lt;-&quot;SELECT name,HR
-FROM Teams
-WHERE yearID=1980
-ORDER BY HR&quot;
-
-result&lt;-sqldf(query)
-
-result$name&lt;-factor(result$name,levels=result$name)
-
-ggplot()+
-  geom_bar(data=result,aes(x=name,y=HR),stat=&#39;identity&#39;,color=&quot;white&quot;,fill=&quot;blue&quot;)+
-  coord_flip()+
-  ylab(&quot;Homeruns&quot;)+
-  xlab(&quot;Teams&quot;)+
-  ggtitle(&quot;1980 Team Homerun Distribution&quot;)</code></pre>
-<p><img src="/post/2017-10-17-r-markdown_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
-<p>The code above shows homerun totals of every team from the 1980’s. Usually the bar graph would not be horizontal but vertical. I used the coord_flip() command to make it horizontal.</p>
-
+  <div>
+    <h2><a href="/post/histograms/">Histograms</a></h2>
+    <div class="article-style">
+      
+      library(Lahman) library(sqldf) library(ggplot2) A histogram is a graphical representation, similar to a bar chart in structure, that organizes a group of data points into user-specified ranges. The histogram condenses a data series into an easily interpreted visual by taking many data points and grouping them into logical ranges or bins.
+query&lt;-&quot;SELECT weight FROM Master&quot; result&lt;-sqldf(query) ggplot()+ geom_histogram(data=result,aes(x=weight),color=&quot;green&quot;,fill=&quot;white&quot;,bins=50)+ ggtitle(&quot;Body Weight Distribution for Baseball Players&quot;) ## Warning: Removed 854 rows containing non-finite values (stat_bin).
+      
     </div>
   </div>
-
-</article>
-
-
-
-
-<div class="container">
-  <nav>
-  <ul class="pager">
-    
-
-    
-    <li class="next"><a href="/post/time-series/">Time Series <span
-      aria-hidden="true">&rarr;</span></a></li>
-    
-  </ul>
-</nav>
-
-</div>
-
-<div class="article-container">
   
 
-</div>
+  
 
+
+</div>
 <footer class="site-footer">
   <div class="container">
     <p class="powered-by">

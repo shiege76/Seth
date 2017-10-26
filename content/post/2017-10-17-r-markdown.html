@@ -1,14 +1,33 @@
 ---
-title: R Markdown
+title: Bar Plot
 author: Seth Hiegel
 date: '2017-10-17'
 slug: r-markdown
 categories:
-  - R
+  - Bar Plots
 tags:
-  - mathematics
+  - Visualization
 ---
 
 
 
-<pre class="r"><code>library(Lahman)</code></pre>
+<pre class="r"><code>library(Lahman)
+library(sqldf)
+library(ggplot2)</code></pre>
+<pre class="r"><code>query&lt;-&quot;SELECT name,HR
+FROM Teams
+WHERE yearID=1980
+ORDER BY HR&quot;
+
+result&lt;-sqldf(query)
+
+result$name&lt;-factor(result$name,levels=result$name)
+
+ggplot()+
+  geom_bar(data=result,aes(x=name,y=HR),stat=&#39;identity&#39;,color=&quot;white&quot;,fill=&quot;blue&quot;)+
+  coord_flip()+
+  ylab(&quot;Homeruns&quot;)+
+  xlab(&quot;Teams&quot;)+
+  ggtitle(&quot;1980 Team Homerun Distribution&quot;)</code></pre>
+<p><img src="/post/2017-10-17-r-markdown_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>The code above shows homerun totals of every team from the 1980’s. Usually the bar graph would not be horizontal but vertical. I used the coord_flip() command to make it horizontal.</p>
